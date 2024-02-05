@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>网易邮箱登录界面</title>
+    <link rel="stylesheet" href="css/登陆界面.css">
+</head>
+
+<body>
+    <div id="container">
+        <div class="email">
+            <div class="top">
+                <h2>账号登陆</h2>
+                <div class="erweima">
+                    <img src="img/二维码.png" alt="加载失败" height="80px" width="80px">
+                </div>
+            </div>
+            <div class="input">
+                <form action="">
+                    <div>
+                        <input type="text" class="text" id="text1" placeholder="邮箱账号或手机号码">
+                        <div class="fill">
+                            @163.com
+                        </div>
+                    </div>
+                    <div>
+                        <input type="password" class="text" id="text2" placeholder="输入密码">
+                        <div class="fill">
+
+                        </div>
+                    </div>
+                    <div class="yanzhengma">
+                        <input type="text" id="captchaInput" placeholder="输入验证码">
+                        <canvas id="captchaCanvas" width="200" height="80"></canvas>
+                    </div>
+                </form>
+            </div>
+            <div class="operate">
+                <p>
+                <form action="">
+                    <input type="checkbox" name="rempwd" class="rememberpwd" value="1"><span class="s">30天内免登录</span>
+                </form>
+                </p>
+                <p class="forgetpwd">
+                    <a href="#" style="color:black">忘记密码</a>
+                </p>
+            </div>
+            <div class="buton">
+                <button onclick="checkCaptcha()" class="login">
+                    登录
+                </button>
+            </div>
+            <div class="register">
+                <div class="lianjie">
+                    <a href="#">注册新账号&nbsp;&nbsp;</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a href="#">&nbsp;&nbsp;注册VIP</a>
+                </div>
+            </div>
+            <div class="footer">
+                <p><a href="#">阅读并接受 《服务条款》和 《隐私政策》</a></p>
+            </div>
+        </div>
+        <div class="email_erweima">
+            <div class="top1">
+                <h2>扫码登陆</h2>
+                <div class="erweima1">
+                    <img src="img/二维码（反面）.png" alt="加载失败" width="69px" height="73px">
+                </div>
+                <p class="top1_footer">请打开<span style="color:blue"> 微信App </span>扫一扫登录</p>
+            </div>
+            <div class="center">
+                <img src="img/二维码(正文).png" alt="加载失败" width="200" height="200">
+            </div>
+            <div class="low">
+                <p><a href="#">密码登录 </a> | <a href="#"> 注册新账号</a></p>
+            </div>
+            <div class="footer1">
+                <p>阅读并接受 《服务条款》和 《隐私政策》</p>
+            </div>
+        </div>
+    </div>
+    <script src="js/登陆界面.js"></script>
+</body>
+
+</html>

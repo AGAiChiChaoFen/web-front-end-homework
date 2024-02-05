@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<title>月圆中秋</title>
+	<link rel="stylesheet" type="text/css" href="css/index.css" />
+	<link rel="stylesheet" type="text/css" href="css/月圆中秋.css" />
+	<style>
+		* {
+	/* margin: 0; */
+	padding: 0;
+}
+
+.nav {
+	list-style: none;
+	background-color: rgba(30, 50, 100, 0.8);
+	width: 1000px;
+	margin: 20px auto;
+	overflow: hidden;
+	border-radius: 30px;
+	zoom: 1;
+}
+
+.nav li {
+	float: left;
+	width: 200px;
+}
+
+.nav a {
+	width: 100%;
+	display: inline-block;
+	text-align: center;
+	padding: 5px 3px;
+	text-decoration: none;
+	color: whitesmoke;
+	font-weight: bold;
+}
+
+.nav a:hover {
+	background-color: rgba(221, 221, 211, 1);
+}
+
+.abc {
+	height: 700px;
+	width: 1200px;
+	margin: 20px auto;
+	background-image: url(moon%20picture.png);
+	background-size: 100% 100%;
+	overflow: hidden;
+	border: skyblue 5px solid;
+	border-radius: 80px;
+}
+
+#div {
+	width: 800px;
+	height: 450px;
+	margin: 100px auto 500px;
+	background-color: rgb(41, 91, 159);
+	border-radius: 10px;
+}
+
+#div p {
+	margin: 0px auto 0px;
+	color: darkblue;
+}
+
+#div img {
+	width: 400px;
+	height: 400px;
+	border-radius: 20px;
+}
+
+button {
+	color: darkblue;
+}
+
+button:hover {
+	cursor: pointer;
+	/* cursor规则是设定网页浏览时用户鼠标指针的样式，也就是鼠标的图形形状
+			cursor：pointer设定鼠标的形状为一只伸出食指的手，这也是绝大多数浏览器里面鼠标停留在网页链接上方时候的样式
+			另外可以选择其他鼠标指针样式，常用的有default 箭头，crosshair 十字，progress 箭头和沙漏等等 */
+}
+	</style>
+</head>
+<script src="js/月圆中秋.js"></script>
+
+<body>
+	<div>
+		<ul class="nav">
+			<li><a href="今日中秋.html">今日中秋</a></li>
+			<li><a href="何为中秋.html">何为中秋</a></li><!--这里href的引入部分可以是另一个html的网页  href="index1.html"，依此类推。-->
+			<li><a href="畅游中秋.html">畅游中秋</a></li>
+			<li><a href="诗词中秋.html">诗词中秋</a></li>
+			<li><a href="月圆中秋.html">月圆中秋</a></li>
+		</ul>
+	</div>
+	<div class="abc">
+		<div id="div">
+			<p id="desc"></p>
+			<!--默认显示第二张图片-->
+			<img src="img/picture1.png" alt="" style="width: 800px;height: 400px;">
+			<button id="pre">上一张</button>
+			<button id="next">下一张</button>
+		</div>
+	</div>
+	<script>
+		
+         //预加载,等页面加载完毕后，再执行脚本
+         window.onload = function () {
+          
+		  var num = document.getElementsByTagName("img")[0];
+		  //这里虽然只有一个img标签，但是num变量的结果依然是一个数组
+		  
+		  //定义图像地址
+		  var shuzu = ["img/picture1.png", "img/picture2.png","img/picture3.png" , "img/picture4.png", "img/picture5.png","img/picture6.png","img/picture7.png","img/picture8.png","img/picture9.png","img/picture10.png", ];
+
+		  //获取按钮
+		  var prev = document.getElementById("pre");
+		  var next = document.getElementById("next");
+		  var index = 0;
+		  
+		  //图片描述
+		  var pdesc = document.getElementById("desc");//查找一个id名称为desc的元素对象
+		  pdesc.innerHTML = "一共" + shuzu.length + "张图片" + ",当前是第" + (index + 1) + "张";
+		  //注意此处前面是字符串的拼接，实现加法需要用到括号,默认显示第一张图片的时候，index是0
+		  
+		  //点击切换图片（分为上一张和下一张）
+		  prev.onclick = function () {
+			  index--;
+			  //此处让它循环，点击上一张，表示数组的元素下标在减小，当index<0时，也就表示图片正在往下切换，每切换一张，数组就减一，
+			  if (index < 0)
+				  index = shuzu.length - 1;
+			  num.src = shuzu[index];
+			  pdesc.innerHTML = "一共" + shuzu.length + "张图片" + ",当前是第" + (index + 1) + "张";//注意此处前面是字符串的拼接，实现加法需要用到括号
+		  }
+		 //点击下一张，则index加一，当加到数组的总长度，也就是图片总数时，index恢复默认值
+		  next.onclick = function () {
+			  index++;
+			  if (index > shuzu.length - 1 )
+				  index = 0;
+			  num.src = shuzu[index];
+			  //innerHTML用于获取起始的html标签，onclick 事件会在元素被点击时发生。
+			  pdesc.innerHTML = "一共" + shuzu.length + "张图片" + ",当前是第" + (index + 1) + "张";//注意此处前面是字符串的拼接，实现加法需要用到括号
+		  }
+		 }
+
+	</script>
+</body>
+
+</html>

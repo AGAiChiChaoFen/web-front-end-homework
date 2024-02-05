@@ -1,0 +1,106 @@
+* {
+            /* margin: 0; */
+            padding: 0;
+        }
+     
+
+body{
+	background-image:url(月圆中秋2月亮.png);
+	background-size:cover;
+	position: fixed;
+	top: 0px;
+	left: 0px;
+	
+}
+/* *{
+			padding: 0px;
+			margin: 0px;
+		}
+		.nav{
+			list-style: none;
+			background-color: rgba(30,50,100,0.8);
+			width: 1000px;
+			margin: 20px auto;
+			overflow: hidden;
+			border-radius: 30px;
+			zoom: 1;
+		}
+		.nav li{
+			float: left;
+			width: 200px;
+		}
+		.nav a{
+			width: 100%;
+			display: inline-block;
+			text-align: center;
+		    padding: 5px 3px;
+			text-decoration: none;
+			color: whitesmoke;
+			font-weight: bold;
+		}
+		.nav a:hover{
+			background-color: rgba(221,221,211,1);
+		} */
+.box2{
+	border: transparent 1px solid;
+	height: 100px;
+	width: 1600px;
+	margin: 20px auto;
+}
+.box3{
+	border: transparent 1px solid;
+	height: 1100px;
+	width: 1600px;
+}
+.box2 img{
+	float: left;
+	/* display: inline; */
+	height: auto;
+	width: 100px;
+	animation:t1 5.5s ease-in-out infinite;
+}
+.box3 img:nth-of-type(1){
+	width: 500px;
+	/* text-align: center; */
+	height:auto;
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%,-150%);
+	/* margin-top: 60px;
+	margin-left: 100px; */
+}
+.box3 img:nth-of-type(2){
+	float: right;
+	display: inline;
+	height: auto;
+	width: 500px;
+	  animation: t2 10s ease-in-out infinite;
+	}
+.box3 img:nth-of-type(3){
+	float: left;
+	display: inline;
+	height: auto;
+	width: 400px;
+	margin-top: 100px;
+	animation: t1 10s ease-in-out infinite;
+}
+
+	@keyframes t1 {
+	    50% {
+	        transform: translate(50px, 10px);
+	    }
+	
+	    100% {
+	        transform: translate(0, 0);
+	    }
+	}
+	@keyframes t2 {
+	    50% {
+	        transform: translate(-80px, -110px);
+	    }
+	
+	    100% {
+	        transform: translate(0, 0);
+	    }
+	}

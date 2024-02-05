@@ -1,0 +1,245 @@
+*{
+    padding: 0px;
+    margin:0px;
+}
+ul,ol{
+    list-style:none;
+}
+a{
+    text-decoration: none;
+}
+.left{
+    float: left;
+}
+.right{
+    float:right;
+}
+#container{
+    width:400px;
+    height:475px;
+    margin:10px auto;
+    /* border:1px solid red; */
+    background-color: yellow;
+}
+.email{
+    /* display: none; */
+    background-color: #fff;
+    height:555px;
+    border-radius: 5px;
+    /* border: 3px solid red; */
+    box-shadow:1px 1px 3px #585e6d;
+}
+.top{
+    box-sizing: border-box;
+    height:90px;
+    text-align: center;
+    padding-top: 37px;
+    /* border:1px solid red; */
+}
+.erweima{
+     float:right;
+     margin-top: -67px;
+}
+.erweima:hover{
+    /* border: 2px solid red; */
+}
+.erweima:hover .email_erweima{
+    display: block;
+}
+.erweima:hover .email{
+    display: none;
+}
+.input{
+    width: 500px;
+}
+.text{
+    outline: none;
+    border: 1px solid #848585;
+    border-right: none;
+    margin-left: 26px;
+    margin-top: 10px;
+    width:249px;
+    height:53px;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+}
+.yanzhengma{
+    /* border:1px solid #000; */
+    position: relative;
+}
+#captchaInput{
+    outline: none;
+    border: 1px solid #848585;
+    margin-left: 26px;
+    margin-top: 10px;
+    width:180px;
+    height:53px;
+    border-radius: 5px;
+    border-bottom-left-radius: 5px;
+}
+canvas {
+    position: absolute;
+    outline: none;
+    border: 1px solid #848585;
+    margin-left: 26px;
+    top: 10px;
+    width:135px;
+    height:53px;
+    border-radius: 5px;
+    border-bottom-left-radius: 5px;
+}
+.fill{
+    background-color: #fff;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    box-sizing: border-box;
+    line-height: 50px;
+    margin: auto;
+    float:right;
+    height:54px;
+    width:93px;
+    border: 1px solid #848585;
+    border-left: none;
+    margin-right:131px ;
+    margin-top: 10px;
+}
+.buton{
+    height: 90px;
+    box-sizing: border-box;
+}
+.login{
+    border-radius: 5px;
+    margin: 20px 50px;
+    width:297px;
+    height:50px;
+    text-align: center;
+    color:white;
+    letter-spacing: 15px;
+    font-size: 16px;
+    font-weight: bold;
+    background-color:#3B78DD;
+}
+.login:active{
+    width:290px;
+    height:45px;
+    background-color: #3370FF;
+}
+.login:hover .email_erweima{
+    display: block;
+}
+.login:hover .email{
+    display: none;
+}
+.operate{
+    box-sizing: border-box;
+    /* border:1px solid #000; */
+    height:50px;
+}
+.rememberpwd{
+    float:left;
+    margin-left: 30px;
+    margin-top: 12px;
+}
+.s{
+    display:inline-block;
+    margin-top: 7px;
+    margin-left: 10px;
+}
+.forgetpwd{
+    float: right;
+    margin-top: -19px;
+    margin-right: 57px;
+}
+.forgetpwd a:hover{
+    color:#3B78DD;
+}
+.register{
+    /* border:1px solid #000; */
+    height: 50px;
+    width:376px;
+    text-align: center;
+}
+.lianjie{
+    margin-top: 15px;
+    color:#585e6d;
+}
+.lianjie a:hover{
+    color:#585e6d;
+}
+.lianjie a{
+    color:#848585;
+}
+.footer{
+    width:403px;
+    height:30px;
+    /* border:1px solid #000; */
+    text-align: center;
+    margin-top: 10px;
+}
+.footer a{
+    color:#585e6d;
+}
+
+/* 反面的样式 */
+.email_erweima{
+    background-color: #fff;
+    height:475px;
+    border-radius: 5px;
+    /* border: 3px solid red; */
+    box-shadow:1px 1px 3px #585e6d;
+    display: none;
+}
+.top1{
+    padding-top: 40px;
+    height:100px;
+    text-align: center;
+    /* border:1px solid red; */
+}
+.top1_footer{
+    margin-top: 30px;
+    color:#666666;
+    font-size: 14px;
+}
+.erweima1{
+    height: 73px;
+    width: 69px;
+    float:right;
+    margin-top: -70px;
+}
+.erweima1:active .email{
+    display: block;
+}
+.erweima1:active .email_erweima{
+    display: none;
+}
+.center{
+    margin: 0px auto;
+    height:200px;
+    width:200px;
+    /* border:1ps solid #000; */
+}
+.low{
+    height:30px;
+    /* border:1px solid #000; */
+    margin-top: 20px;
+}
+.low p{
+    text-align: center;
+}
+.low a{
+    color:#666666;
+    font-size: 14px;
+}
+.low a:hover{
+    color:#848585;
+}
+.footer1{
+    margin-top: 40px;
+    /* border:1px solid #000; */
+    height:30px;
+    margin-left: 53px;
+    cursor: pointer;
+}
+.footer1 p{
+    color:#666666;
+}

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<title>诗词中秋</title>
+	<link rel="stylesheet" type="text/css" href="css/index.css" />
+	<link rel="stylesheet" type="text/css" href="css/诗词中秋.css">
+	<link rel="stylesheet" type="text/css" href="css/诗词中秋2.css" />
+</head>
+
+<body>
+	<div>
+		<ul class="nav">
+			<li><a href="今日中秋.html">今日中秋</a></li>
+			<li><a href="何为中秋.html">何为中秋</a></li><!--这里href的引入部分可以是另一个html的网页  href="index1.html"，依此类推。-->
+			<li><a href="畅游中秋.html">畅游中秋</a></li>
+			<li><a href="诗词中秋.html">诗词中秋</a></li>
+			<li><a href="月圆中秋.html">月圆中秋</a></li>
+		</ul>
+	</div>
+	<div class="abc">
+		<div class="box1">
+			<img src="img/诗词中秋1.png" />
+			<img src="img/诗词中秋2.png" />
+			<p>
+				中秋 唐·李朴<br />
+				皓魄当空宝镜升，云间仙籁寂无声；<br />
+
+				平分秋色一轮满，长伴云衢千里明；<br />
+
+				狡兔空从弦外落，妖蟆休向眼前生；<br />
+
+				灵槎拟约同携手，更待银河彻底清。
+			</p><!--这里要考虑到盒子模型的布局如果我们要先将<p>标签写在两张图片上面，这时在box1中就会出现文字的宽高压住图片，从而似的图片的位置发生改变，并且
+				这个文字的宽还是无法手动更改控制的，它一定是会填满box1的width。所以只要我们将图片都写道文字的上方,并且利用它的父元素的父元素进行控制，通过检查可以发现这时文字就可以盖住图片，从而可以实现图文共存。-->
+		</div>
+		<div class="box2">
+			<p>
+				中秋月 唐·齐已<br />
+				空碧无云露湿衣，群星光外涌清规。<br />
+
+				东楼莫碍渐高势，四海待看当午时。<br />
+
+				还许分明吟皓魄，肯教幽暗取丹枝。<br />
+
+				可怜半夜婵娟影，正对五侯残酒池。<br />
+
+			</p>
+			<img src="img/诗词中秋3.png" />
+			<p style="color: rgb(137, 185, 244);">
+				中秋月 唐·白居易<br />
+				万里清光不可思，添愁益恨绕天涯。<br />
+
+				谁人陇外久征戍？何处庭前新别离？<br />
+
+				失宠故姬归院夜，没蕃老将上楼时。<br />
+
+				照他几许人肠断，玉兔银蟾远不知。<br />
+			</p>
+		</div>
+		<div class="box3">
+
+			<!-- <img src="img/诗词中秋4.png" /> -->
+			<img src="img/诗词中秋5.png" />
+			<p>
+				八月十五夜玩月 唐·刘禹锡<br />
+				天将今夜月，一遍洗寰瀛。<br />
+
+				暑退九霄净，秋澄万景清。<br />
+
+				星辰让光彩，风露发晶英。<br />
+
+				能变人间世，翛然是玉京。<br />
+			</p>
+		</div>
+	</div>
+</body>
+
+</html>
+<!--针对空白处难以出现文字的情况，一个解决思路为把abc这个父级元素分割成三块小的div元素，让这三个小的div元素实现字体环绕的效果-->
